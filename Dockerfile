@@ -21,6 +21,9 @@ RUN sh build.sh
 
 # Add extra docker commands here (if any)...
 
+RUN chmod 775 ./get-cj.sh
+RUN sh get-cj.sh
+
 # Run the app
 RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/springboot/maven/2.x/run.sh
 RUN chmod 775 ./run.sh
